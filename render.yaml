@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: mindpulse-ai
+    env: python
+    plan: free
+    autoDeploy: true
+    buildCommand: pip install -r requirements.txt && python -m nltk.downloader vader_lexicon
+    startCommand: streamlit run frontend/Home.py --server.address 0.0.0.0 --server.port $PORT
+    envVars:
+      - key: APP_ENV
+        value: render
+      - key: STREAMLIT_FORCE_LOCAL_BACKEND
+        value: "true"
+      - key: APP_SECRET_KEY
+        generateValue: true
+      - key: ALERT_REAL_DELIVERY_ENABLED
+        value: "false"
+      - key: ALERT_EMAIL_PROVIDER
+        value: resend
+      - key: ALERT_SMS_PROVIDER
+        value: twilio
