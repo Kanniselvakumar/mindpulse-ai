@@ -47,15 +47,6 @@ student-wellness-system/
 `-- runtime.txt
 ```
 
-## Documentation Pack
-
-The project now includes a polished academic documentation set inside `docs/`:
-
-- `docs/FINAL_YEAR_PROJECT_REPORT.md` for the formal report
-- `docs/IMPLEMENTATION_ADDENDUM.md` for the latest auth and live-alert additions
-- `docs/ML_DATASET_NOTE.md` for dataset source and preprocessing clarity
-- `docs/PRESENTATION_OUTLINE.md` for PPT preparation
-- `docs/VIVA_QUESTIONS.md` for common viva questions and answers
 
 ## ML and Dataset Credibility
 
