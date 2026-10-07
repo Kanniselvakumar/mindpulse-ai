@@ -7,6 +7,8 @@ services:
     buildCommand: pip install -r requirements.txt && python -m nltk.downloader vader_lexicon
     startCommand: streamlit run frontend/Home.py --server.address 0.0.0.0 --server.port $PORT
     envVars:
+      - key: PYTHONPATH
+        value: .
       - key: APP_ENV
         value: render
       - key: STREAMLIT_FORCE_LOCAL_BACKEND
