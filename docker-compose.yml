@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  mindpulse-ai:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mindpulse-ai
+    ports:
+      - "8501:8501"
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      - APP_ENV=production
+      - STREAMLIT_FORCE_LOCAL_BACKEND=true
+      - STREAMLIT_SERVER_PORT=8501
+      - STREAMLIT_SERVER_ADDRESS=0.0.0.0
+      - STREAMLIT_SERVER_HEADLESS=true
+    volumes:
+      # Persist SQLite database and runtime data across container restarts
+      - mindpulse_data:/app/backend/data
+    restart: unless-stopped
+
+volumes:
+  mindpulse_data:
+    driver: local

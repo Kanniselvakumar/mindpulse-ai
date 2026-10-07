@@ -1,0 +1,42 @@
+# Git
+.git
+.gitignore
+
+# Python caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Testing caches & temp files
+.pytest_cache/
+.pytest_tmp*/
+pytest-cache-files-*/
+.coverage
+htmlcov/
+
+# Local databases & runtime state (persisted via Docker volumes)
+backend/data/*.db
+backend/data/*.db-journal
+backend/data/*.db-wal
+
+# Streamlit local secrets
+.streamlit/secrets.toml
+
+# IDEs & OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Documentation & presentation files (optional to keep image lean)
+docs/
+*.pdf
+Mindpulse logo.png

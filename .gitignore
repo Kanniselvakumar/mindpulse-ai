@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual env
+venv/
+.env
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Database
+*.db
+
+# Pytest
+.pytest_cache/
+.pytest_tmp/
+pytest-cache-files-*/
+.pytest_tmp*
+
+# OS files
+.DS_Store
+Thumbs.db
